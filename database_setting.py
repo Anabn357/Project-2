@@ -9,8 +9,11 @@ import json
 with open('data/json/master_table.json') as f:
   master_data = json.load(f)
 
-with open('data/json/kaggle_data.json') as f:
-  kaggle_data = json.load(f)
+with open('data/json/rating_sale.json') as f:
+  rating_sale = json.load(f)
+  
+with open('data/json/sales_data.json') as f:
+  sale_data = json.load(f)
   
 with open('data/json/whatoplay_data.json') as f:
   whatoplay_data = json.load(f)
@@ -26,8 +29,11 @@ db = client.project_2
 master_table = db.master
 master_table.insert_one(master_data)
 
-kaggle_table = db.kaggle
-kaggle_table.insert_one(kaggle_data)
+sale_table = db.sale
+sale_table.insert_one(sale_data)
+
+rating_sale_table = db.rating_sale
+rating_sale_table.insert_one(rating_sale)
 
 whatoplay_table = db.whatoplay
 whatoplay_table.insert_one(whatoplay_data)
