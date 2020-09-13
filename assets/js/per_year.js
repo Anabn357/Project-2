@@ -1,4 +1,7 @@
-function initialPage(data1, data2){
+function initialPage(data1, data2, data3){
+
+
+    // Creating highchart plot for genre 
 
     var year = data1[0].Year;
     var new_year = year;
@@ -107,7 +110,8 @@ function initialPage(data1, data2){
         },
         series: data_series
     });
-
+    
+    // Creating highchart plot for platform
     // /////////////////////////////////
 
     var year = data2[0].Year;
@@ -132,7 +136,6 @@ function initialPage(data1, data2){
       };
     
     data_series_platfrom= [];
-    // colors = ["#fa9fb5", "#addd8e", "#7fcdbb", "#fec44f", "#fc9272", "#566573", "#A569BD", "#F7DC6F", "#229954", "#ECF0F1", "#78281F", "#1B4F72", "#B7950B", "#E74C3C", "#8E44AD", "#3498DB", "#16A085", "#2ECC71", "#D68910", "#BA4A00", "#A6ACAF", "#707B7C", "#273746", "#922B21"];
 
     for (j = 0; j < platform.length; j++){
         data_series_platfrom.push({name:platform[j],data:[NA_sale[j],EU_sale[j],JP_sale[j],other_sale[j]]})
@@ -217,6 +220,79 @@ function initialPage(data1, data2){
         series: data_series_platfrom
     });
 
+    /////////////////////////////////////////////////////////////
+
+    // creating bar chart for top 10 based on selling:
+
+    var year = data3[data3.length - 1].Year;
+    var new_year = year;
+
+    top_10_names = [];
+    top_10_sales = [];
+
+    colors_bar = ["red", "orangered","#FF6666", "FF9933", "#FFFF99", "#CCFF99",  "yellow", "#00FF00","green", "#056608"]
+    
+
+    var i = 0
+
+    var count = 0;
+
+    for (i= 0; i<data3.length; i++) {
+    new_year = data3[i].Year;
+      if (new_year == year && count<10){
+        count +=1;
+        name = data3[i].Name;
+        sale = data3[i].Global_Sales;
+        top_10_names.push(name);
+        top_10_sales.push(sale);
+      }
+    };
+
+
+    //  Create the bubble dataset
+    var dataset_bar = [{
+      x: top_10_sales*1000000,
+      y: (top_10_names).reverse(),
+      type: "bar",
+      name: "Global Sales",
+      text: top_10_names,
+      orientation: 'h',
+      width: 0.5,
+      marker: {
+          color: colors_bar,
+        }
+  }];
+  
+  var layout_bar = {
+    title: {text: "Top 10 Selling Games in" +year,
+    font: {
+      color: "white"
+    }},
+    xaxis: { title: {text: "Global Sale (million)",  font: {
+      color: "white"
+    } }, 
+    tickfont: {
+      color: "#FFFFFF",
+  },
+  },
+    yaxis:{tickfont: {
+      color: "#FFFFFF",
+  } },
+    margin: {
+      t: 40,
+      l:200,
+      pad: 4
+    },
+    // hovermode:'closest',
+    plot_bgcolor :'#181818',
+    paper_bgcolor: "#181818",
+    
+  };
+  
+   // Plot the chart to a div tag with id "plot"
+   
+   Plotly.newPlot("top_10_sales", dataset_bar, layout_bar);
+
 
     }
 
@@ -225,8 +301,9 @@ function initialPage(data1, data2){
     // read our data
     var data1 = await d3.json("../../Resources/genre_year.json");
     var data2 = await d3.json("../../Resources/platform_year.json");
+    var data3 = await d3.json("../../Resources/top_sales.json")
 
-    initialPage(data1, data2);
+    initialPage(data1, data2, data3);
 
     // Select the button
     var button = d3.select("#button");
@@ -459,6 +536,70 @@ function initialPage(data1, data2){
             },
             series: data_series_platform
         });
+
+    top_10_names = [];
+    top_10_sales = [];
+
+    var i = 0
+    var count = 0;
+
+    for (i= 0; i<data3.length; i++) {
+    new_year = data3[i].Year;
+      if (new_year == year && count<10){
+        count +=1;
+        name = data3[i].Name;
+        sale = data3[i].Global_Sales;
+        top_10_names.push(name);
+        top_10_sales.push(sale);
+      }
+    };
+
+
+    //  Create the bubble dataset
+    var dataset_bar = [{
+      x: top_10_sales*1000000,
+      y: (top_10_names).reverse(),
+      type: "bar",
+      name: "Global Sales",
+      text: top_10_sales,
+      orientation: 'h',
+      width: 0.5,
+      marker: {
+          color:  colors_bar,
+        }
+  }];
+  
+
+  var layout_bar = {
+    title: {text: "Top 10 Selling Games in" +year,
+    font: {
+      color: "white"
+    }},
+    xaxis: { title: {text: "Global Sale (million)",  font: {
+      color: "white"
+    } }, 
+    tickfont: {
+      color: "#FFFFFF",
+  },
+  },
+    yaxis:{tickfont: {
+      color: "#FFFFFF",
+  } },
+    margin: {
+      t: 40,
+      l: 200,
+      pad: 4
+    },
+    // hovermode:'closest',
+    plot_bgcolor :'#181818',
+    paper_bgcolor: "#181818",
+    
+  };
+  
+   // Plot the chart to a div tag with id "plot"
+   
+   Plotly.newPlot("top_10_sales", dataset_bar, layout_bar);   
+    
     
     
         

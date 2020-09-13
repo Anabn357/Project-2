@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Champions Dashboard</title>
+    <title>Analysis Per Year</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css" media="screen">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/highcharts-more.js"></script> 
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     
   </head>
 
@@ -76,6 +77,13 @@
             </div>
           </article>
         </div>
+        <div class ="col-md-12">
+          <article class=" description-content" style="margin-top:0px; height: 500px">
+            <div class="col-md-6">
+              <div id="top_10_sales"></div>
+            </div>
+          </article>
+        </div>
       </section>
     </div>
     <!-- End of container -->
@@ -86,8 +94,8 @@
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-    <script src="../assets/js/highcharts.js"></script>
-    <!-- <script src="../assets/js/highchart_platform_year.js"></script> -->
+    <script src="../assets/js/per_year.js"></script>
+    
   </body>
 
 </html>

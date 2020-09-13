@@ -274,4 +274,74 @@ body {
   background-color: #4aaaa5;
 }
 
-/* ----FOOTER END---- */
+.tooltip {
+  position: absolute;
+  width: 135px;
+  height: 60px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  color: white;
+  text-align: center;
+  background: DarkBlue;
+  border: 0;
+  border-radius: 10px;
+}
+
+.chart::before {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-image: url("maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.active {
+  /* font-weight: bold; */
+  font-size: 18px;
+  fill:white;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+  font-weight: bold
+
+}
+
+.inactive {
+  font-weight: lighter;
+  fill:gray;
+  font-size: 18px;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+ 
+}
+
+.inactive:hover {
+  fill: gray;
+  cursor: pointer;
+}
+
+
+.chart {
+  display: block;
+  margin: 0;
+}
+
+.axisWhite line{
+  stroke: white;
+}
+
+.axisWhite path{
+  stroke: white;
+}
+
+.axisWhite text{
+  fill: white;
+}  
