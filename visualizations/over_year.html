@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Champions Dashboard</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css" media="screen">
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script> 
-    
-  </head>
+<html lang="en">
 
-  <body>
-    <!-- Start of navbar -->
-    <nav class="navbar navbar-default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Console Gaming</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/d3Style.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" media="screen">
+</head>
+
+<body>
+
+     <!-- Start of navbar -->
+     <nav class="navbar navbar-default">
       <div class="container-fluid navbar-custom">
 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -50,23 +50,28 @@
     </nav>
     <!-- End of navbar -->
 
-    <!-- Start of container -->
-    <div class="container">
-      <section class="row">
-        <div class="col-md-12">
-          <article class="description-content">
-            <div id= "over_year"></div>
-          </article>
-        </div>
-      </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 well" style ="background-color: #181818;">
+          <div id="genre"></div>
+      </div>
     </div>
-    <!-- End of container -->
+    <div class="row">
+      <div class="col-md-12 well" style ="background-color: #181818;">
+          <select id="selDataset"></select>
+          <div id="platform"></div>
+      </div>
+    </div>
+  </div>
 
-    <!-- jQuery CDN -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="../assets/js/overyear_1.js"></script>
+  <script type="text/javascript" src="../assets/js/overyear_2.js"></script>
 
-    <!-- Bootstrap CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  </body>
+
+</body>
 
 </html>
