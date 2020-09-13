@@ -250,6 +250,7 @@ function initialPage(data1, data2, data3){
 
 
     //  Create the bubble dataset
+    
     var dataset_bar = [{
       x: top_10_sales*1000000,
       y: (top_10_names).reverse(),
