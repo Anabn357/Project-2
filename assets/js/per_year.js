@@ -265,7 +265,7 @@ function initialPage(data1, data2, data3){
   }];
   
   var layout_bar = {
-    title: {text: "Top 10 Selling Games in" +year,
+    title: {text: "Top 10 Selling Games in " +year,
     font: {
       color: "white"
     }},
@@ -572,7 +572,7 @@ function initialPage(data1, data2, data3){
   
 
   var layout_bar = {
-    title: {text: "Top 10 Selling Games in" +year,
+    title: {text: "Top 10 Selling Games in " +year,
     font: {
       color: "white"
     }},

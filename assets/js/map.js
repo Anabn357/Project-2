@@ -103,19 +103,19 @@ var otherStyle = {
     // Adding sales data to our map
 
     L.marker(coordinates[0], {icon: Icon}).bindPopup("<h3>" + Top_Seller_NA_EU[0].Name +
-    "</h3><hr><p>" +"Paltform: "+ Top_Seller_NA_EU[0].Platform + "<br> NA Sale: $"+
+    "</h3><hr><p>" +"Platform: "+ Top_Seller_NA_EU[0].Platform + "<br> NA Sale: $"+
     Top_Seller_NA_EU[0].NA_sale + " Million </p>").addTo(myMap);
 
     L.marker(coordinates[1],  {icon: Icon}).bindPopup("<h3>" + Top_Seller_NA_EU[0].Name +
-    "</h3><hr><p>" +"Paltform: "+ Top_Seller_NA_EU[0].Platform + "<br> EU Sale: $"+
-    Top_Seller_NA_EU[0].EU_sale + " Million </p>").addTo(myMap);
+    "</h3><hr><p>" +"Platform: "+ Top_Seller_NA_EU[0].Platform + "<br> EU Sale: $"+
+    Top_Seller_NA_EU[0].EU_Sale + " Million </p>").addTo(myMap);
 
     L.marker(coordinates[2],  {icon: Icon}).bindPopup("<h3>" + Top_Seller_JP[0].Name +
-    "</h3><hr><p>" +"Paltform: "+ Top_Seller_JP[0].Platform + "<br> JP Sale: $"+
+    "</h3><hr><p>" +"Platform: "+ Top_Seller_JP[0].Platform + "<br> JP Sale: $"+
     Top_Seller_JP[0].JP_sale + " Million </p>").addTo(myMap);
     
     L.marker(coordinates[3],  {icon: Icon}).bindPopup("<h3>" + Top_Seller_other[0].Name +
-    "</h3><hr><p>" +"Paltform: "+ Top_Seller_other[0].Platform + "<br> Other Sale: $"+
+    "</h3><hr><p>" +"Platform: "+ Top_Seller_other[0].Platform + "<br> Other Sale: $"+
     Top_Seller_other[0].other_sale + " Million </p>").addTo(myMap);
 
 
