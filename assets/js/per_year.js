@@ -1,6 +1,4 @@
 function initialPage(data1, data2, data3){
-
-
     // Creating highchart plot for genre 
 
     var year = data1[0].Year;
@@ -600,7 +598,99 @@ function initialPage(data1, data2, data3){
    // Plot the chart to a div tag with id "plot"
    
    Plotly.newPlot("top_10_sales", dataset_bar, layout_bar);   
-    
+
+// creating bar chart for top 10 based on selling:
+d3.json('top_10_game_score.json').then((data) => {
+    var year = data[data.length - 1].Year_of_Release;
+    var new_year = year;
+    console.log(data)
+    top_10_names = [];
+    top_10_score = [];
+    colors_bar = ["red", "orangered", "#FF6666", "FF9933", "#FFFF99", "#CCFF99", "yellow", "#00FF00", "green", "#056608"]
+    var i = 0
+    var count = 0;
+    for (i = 0; i < data.length; i++) {
+        new_year = data[i].Year_of_Release;
+        if (new_year == year && count < 10) {
+            count += 1;
+            name = data[i].Name;
+            score = data[i].Critic_Score;
+            top_10_names.push(name);
+            top_10_score.push(score);
+        }
+    };
+
+    var dataset_bar = [{
+        x: top_10_score,
+        y: (top_10_names).reverse(),
+        type: "bar",
+        name: "Critic Score",
+        text: top_10_names,
+        orientation: 'h',
+        width: 0.5,
+        marker: {
+            color: colors_bar,
+        }
+    }];
+    var layout_bar = {
+        title: {
+            text: "Top 10 Critic Score Games" + year,
+            font: {
+                color: "white"
+            }
+        },
+        xaxis: {
+            title: {
+                text: "Critic Score", font: {
+                    color: "white"
+                }
+            },
+            tickfont: {
+                color: "#FFFFFF",
+            },
+        },
+        yaxis: {
+            tickfont: {
+                color: "#FFFFFF",
+            }
+        },
+        margin: {
+            t: 40,
+            l: 200,
+            pad: 4
+        },
+        // hovermode:'closest',
+        plot_bgcolor: '#181818',
+        paper_bgcolor: "#181818",
+    };
+    // Plot the chart to a div tag with id "plot"
+    Plotly.newPlot('myDiv', dataset_bar, layout_bar);
+
+    var dataset_bubble = [{
+        x: top_10_score,
+        y: top_10_names,
+        text: top_10_score,
+        mode: 'markers',
+        marker: {
+            size: top_10_score * 3,
+            color: top_10_score
+        }
+    }];
+
+    var layout_bubble = {
+        xaxis: { title: "" },
+        yaxis: { title: "" },
+        margin: {
+            t: 10,
+            pad: 4
+        }
+    }
+
+    Plotly.newPlot("myBubble", dataset_bubble, layout_bubble);
+})
+
+
+
     
     
         
