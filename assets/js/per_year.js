@@ -600,7 +600,7 @@ function initialPage(data1, data2, data3){
    Plotly.newPlot("top_10_sales", dataset_bar, layout_bar);   
 
 // creating bar chart for top 10 based on selling:
-d3.json('top_10_game_score.json').then((data) => {
+d3.json('../../Resources/top_10_game_score.json').then((data) => {
     var year = data[data.length - 1].Year_of_Release;
     var new_year = year;
     console.log(data)
@@ -687,13 +687,7 @@ d3.json('top_10_game_score.json').then((data) => {
     }
 
     Plotly.newPlot("myBubble", dataset_bubble, layout_bubble);
-})
-
-
-
-    
-    
-        
+})        
         }
     
     })();    
