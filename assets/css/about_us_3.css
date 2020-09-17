@@ -1,0 +1,56 @@
+.features .icon-block {
+    height: 100px;
+    width: 100px;
+    border: 3px solid #333;
+    border-radius: 1000px;
+    text-align: center;
+    margin: 30px 30px 0px 30px;
+}
+
+.features .icon-block a {
+	padding:0px!important;
+}
+
+.features .icon-block i {
+    color: #333;
+    font-size: 50px;
+    line-height: 96px;
+}
+
+.features .icon-block i:hover {
+    color: #000;
+}
+
+.features .feature-title {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+}
+
+.features .feature-title > a {
+    color: #333!important;
+}
+
+.resources {
+	margin-top: 60px;
+}
+.icon-block h5 {
+    font-size: 1.64rem;
+    line-height: 110%;
+    margin: 1.0933333333rem 0 .656rem 0;
+    font-weight:normal;
+}
+
+.icon-block h5 a {
+	color: rgba(0,0,0,0.87);
+	padding:0;
+}
+
+.headshot {
+    max-height: 100%;
+    max-width: 100%;
+    padding-top: 10px;
+}
+

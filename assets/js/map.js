@@ -88,7 +88,7 @@ var otherStyle = {
 
 //  Having representative for our four regions:
 
-    coordinates = [[55.000000, -115.000000],[65, 90],[25.443707, 139.638031],[20.715298, 51.404343]]
+    coordinates = [[55.000000, -115.000000],[65, 90],[35.652832, 139.839478],[20.715298, 51.404343]]
 
     // Changing icon format
 

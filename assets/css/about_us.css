@@ -1,0 +1,76 @@
+/*
+HTML 5 Template Name: 
+File: About Us - 4 CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+
+  
+#breakdown {
+	margin: 0 auto;
+	height: 500px;
+}
+
+.modebar {
+	display: none !important;
+}
+
+#about-us{display:block; width:100%; line-height:1.6em;}
+
+#about-us #team{margin-bottom:0;}
+#about-us #team ul{margin:0; padding:0; list-style:none; text-align:center;}
+#about-us #team ul li{width:215px; margin-bottom:20px; padding:4px; border:1px solid #CCCCCC;}
+#about-us #team ul li.odd{margin-left:0;}
+#about-us #team ul ul{margin:20px 0 15px 0;}
+#about-us #team ul ul li{display:inline; margin:0 0 0 6px; padding:0; border:none;}
+#about-us #team ul ul li:first-child{margin-left:0;}
+#about-us #team ul ul li a{}
+#about-us #team ul ul li a img{}
+#about-us #team ul li p{margin:0; padding:0;}
+#about-us #team ul li .team_name{font-weight:bold;}
+#about-us #team ul li .team_title{margin:0 0 12px 0; font-size:11px; line-height:normal;}
+
+#about-us #statements{margin-bottom:0;}
+#about-us #statements article{margin:30px 0 0 0;}
+#about-us #statements article:first-child{margin-top:0;}
+#about-us #statements article h2{margin:0 0 20px 0; padding:0 0 20px 0; border-bottom:1px solid #CCCCCC;}
+#about-us #statements article blockquote{font-style:italic; font-weight:bold; text-align:justify;}
+#about-us #statements article img{}
+#about-us #statements article ul{}
+#about-us #statements article ul li{}
+#about-us #statements article p{}
+
+#about-us #statements article #skillset{line-height:normal;}
+#about-us #statements article #skillset ul{margin:0; padding:0; list-style:none;}
+#about-us #statements article #skillset ul li{margin:5px 0 0 0; padding:3px; color:#333333; background-color:#E2E2E2;}
+#about-us #statements article #skillset ul li:first-child{margin-top:0;}
+#about-us #statements article #skillset ul li strong{display:block; padding:5px 8px; color:#FFFFFF; background-color:#333333; font-weight:normal;}
+#about-us #statements article #skillset ul li.size_20 strong{width:16.5%;}
+#about-us #statements article #skillset ul li.size_25 strong{width:21.5%;}
+#about-us #statements article #skillset ul li.size_30 strong{width:26.5%;}
+#about-us #statements article #skillset ul li.size_35 strong{width:31.5%;}
+#about-us #statements article #skillset ul li.size_40 strong{width:36.5%;}
+#about-us #statements article #skillset ul li.size_45 strong{width:41.5%;}
+#about-us #statements article #skillset ul li.size_50 strong{width:46.5%;}
+#about-us #statements article #skillset ul li.size_55 strong{width:51.5%;}
+#about-us #statements article #skillset ul li.size_60 strong{width:56.5%;}
+#about-us #statements article #skillset ul li.size_65 strong{width:61.5%;}
+#about-us #statements article #skillset ul li.size_70 strong{width:66.5%;}
+#about-us #statements article #skillset ul li.size_75 strong{width:71.5%;}
+#about-us #statements article #skillset ul li.size_80 strong{width:76.5%;}
+#about-us #statements article #skillset ul li.size_85 strong{width:81.5%;}
+#about-us #statements article #skillset ul li.size_90 strong{width:86.5%;}
+#about-us #statements article #skillset ul li.size_95 strong{width:91.5%;}
+#about-us #statements article #skillset ul li.size_100 strong{width:96.5%;}
+
+/* CSS3 Elements Only Work In Latest Browsers */
+
+#about-us #skillset li, #about-us #statements strong{
+	/* Rounded Corners */
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-khtml-border-radius:8px;
+	border-radius:8px;
+	}
