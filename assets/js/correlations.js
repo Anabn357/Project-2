@@ -121,7 +121,7 @@ function makeResponsive() {
     
     // Retrieve data from the CSV file and execute everything below
     (async function(){
-      var whatoplay_data = await d3.csv("../../Resources/whatoplay_data.csv").catch(err => console.log(err))
+      var whatoplay_data = await d3.csv("Resources/whatoplay_data.csv").catch(err => console.log(err))
       console.log(whatoplay_data)
       // parse data
       whatoplay_data.forEach(function(data) {

@@ -1,5 +1,5 @@
 // Load platform data
-d3.csv("../../Resources/grouped_platforms.csv").then(function(data) {
+d3.csv("Resources/grouped_platforms.csv").then(function(data) {
     var vgData = data;
     console.log(vgData);
 
@@ -150,7 +150,7 @@ d3.csv("../../Resources/grouped_platforms.csv").then(function(data) {
         };
 
         // Load game data
-        d3.csv("../../Resources/grouped_years_platforms_names.csv").then(function(data) {
+        d3.csv("Resources/grouped_years_platforms_names.csv").then(function(data) {
             var groupedNamesData = data;
 
             // Format game datatypes
@@ -278,7 +278,7 @@ d3.csv("../../Resources/grouped_platforms.csv").then(function(data) {
             };
 
             // Load mean global sales data
-            d3.csv("../../Resources/grouped_years_mean.csv").then(function(data) {
+            d3.csv("Resources/grouped_years_mean.csv").then(function(data) {
                 var groupedYearsMean = data;
 
                 // Format game data

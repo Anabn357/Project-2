@@ -1,6 +1,6 @@
 
 // Load genre data
-d3.csv("../../Resources/grouped_years_genres.csv").then(function(data) {
+d3.csv("Resources/grouped_years_genres.csv").then(function(data) {
     var yearsGenres = data;
     console.log(yearsGenres);
 
