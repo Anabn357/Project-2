@@ -20,10 +20,7 @@ Links –
 -	JP_Sales - Sales in Japan (in millions)
 -	Other_Sales - Sales in the rest of the world (in millions)
 -	Global_Sales - Total worldwide sales.
-
-		https://project-awesome.org/leomaurodesenv/game-datasets#dataset
-Screenshots – 
-	The following is the snippet of the dataset we found to execute our project.  
+	https://project-awesome.org/leomaurodesenv/game-datasets#dataset
  
 Possible final design – 
 	The possible final design will be an interactive website with several pages with our visualizations. The visualizations will be interactive with the mapping being pulled from the dataset. Some of the visualizations will have user selection.  With backend coding including Flask, JS, Plotly, D3, Geo-mapping and Leaflet.
